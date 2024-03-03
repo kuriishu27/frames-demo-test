@@ -10,7 +10,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   if (idAsNumber === 7) {
     return new NextResponse(`<!DOCTYPE html><html><head>
     <title>This is frame 7</title>
-    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame" content="0.0.1" />
     <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQeEmFRS278veLisTfR4BVoiUQ9We2nrw4WuWonvpBZyf/0.png" />
     <meta property="fc:frame:button:1" content="Cosmic Cowboys" />
     <meta property="fc:frame:button:1:action" content="post_redirect" />
@@ -23,7 +23,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   } else {
     return new NextResponse(`<!DOCTYPE html><html><head>
     <title>This is frame ${id}</title>
-    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame" content="0.0.1" />
     <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQeEmFRS278veLisTfR4BVoiUQ9We2nrw4WuWonvpBZyf/${id}.png" />
     <meta property="fc:frame:button:1" content="Next Page" />
     <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
